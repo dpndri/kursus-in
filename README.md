@@ -200,9 +200,7 @@ go test -v ./...
 
 ## Tim Pengembang
 
-Proyek ini disusun untuk memenuhi Tugas Besar Mata Kuliah **Algoritma dan Pemrograman 2**:
+Proyek ini dikembangkan oleh:
 
-| Nama | NIM |
-| :--- | :--- |
-| **Muhammad Irgie Dapiandri** | 103012500187 |
-| **Angga Yudhistira** | 103012500322 |
+- **Muhammad Irgie Dapiandri** ([@dpndri](https://github.com/dpndri))
+- **Angga Yudhistira**
