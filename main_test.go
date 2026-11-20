@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"os"
+	"testing"
+)
 
 func seedSamplePeserta() (tabPeserta, int) {
 	var p tabPeserta
@@ -68,4 +71,33 @@ func TestRelasiDanPencarianID(t *testing.T) {
 	if idBidang != 2 {
 		t.Fatalf("ambilIdBidangDariKursus(20): ingin 2, dapat %d", idBidang)
 	}
+}
+
+func TestFullInteractiveCLI(t *testing.T) {
+	inputs := "3\n1\n1\nBackend\n1\n2\nUIUX\n2\n3\n" +
+		"2\n1\n10\nGolang\n1\n1\n20\nFigma\n2\n2\n3\n" +
+		"1\n1\n" +
+		"1\n103\nCitra\n12-05-2026\n10\ntrue\n" +
+		"1\n101\nAndi\n10-05-2026\n10\ntrue\n" +
+		"1\n102\nBudi\n11-05-2026\n20\nfalse\n" +
+		"2\n102\n4\ntrue\n5\n" +
+		"4\n5\n" +
+		"2\n1\n2\n3\n4\n5\n" +
+		"3\n1\n1\n2\nAndi\n3\n" +
+		"4\n" +
+		"1\n3\n103\n5\n" +
+		"5\n4\n"
+
+	r, w, err := os.Pipe()
+	if err != nil {
+		t.Fatal(err)
+	}
+	_, _ = w.WriteString(inputs)
+	_ = w.Close()
+
+	oldStdin := os.Stdin
+	os.Stdin = r
+	defer func() { os.Stdin = oldStdin }()
+
+	main()
 }
