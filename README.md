@@ -27,7 +27,7 @@ Aplikasi *Command Line Interface* (CLI) berbasis **Go (Golang)** untuk mengelola
 
 ## Spesifikasi Sistem
 
-Berdasarkan spesifikasi Tugas Besar Algoritma dan Pemrograman 2 (Soal Nomor 22):
+Sistem ini dirancang untuk memenuhi kebutuhan pengelolaan pendaftaran kursus dengan spesifikasi fungsional berikut:
 
 | Kode | Spesifikasi Fungsional | Implementasi |
 | :--- | :--- | :--- |
@@ -36,13 +36,6 @@ Berdasarkan spesifikasi Tugas Besar Algoritma dan Pemrograman 2 (Soal Nomor 22):
 | **c** | Mencari data peserta berdasarkan bidang minat atau nama lengkap. | *Sequential Search* (`cariPesertaBidang`) & *Binary Search* (`cariPesertaNama`) |
 | **d** | Mengurutkan data peserta berdasarkan ID pendaftaran atau nama secara alfabetis. | *Selection Sort* (`urutIDPesertaAscending/Descending`) & *Insertion Sort* (`urutNamaPesertaAscending/Descending`) |
 | **e** | Menampilkan statistik jumlah pendaftar per bidang minat, per kursus, dan total peserta aktif. | `statistikPeserta` (menghitung distribusi jumlah dan persentase) |
-
-<details>
-<summary>Lihat Dokumen Soal Asli (Dokumentasi-KursusIn.jpeg)</summary>
-
-![Spesifikasi Tugas Besar KursusIn](./Dokumentasi-KursusIn.jpeg)
-
-</details>
 
 ---
 
